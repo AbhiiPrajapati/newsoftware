@@ -4,7 +4,7 @@
 
 const DATA_KEY = "tropica.local-data.v1";
 const SESSION_KEY = "tropica.local-admin-session";
-const ADMIN_EMAIL = "abhishek@apple.com";
+const ADMIN_EMAIL = "abhishek@company.com";
 const ADMIN_PASSWORD = "12345";
 const ADMIN_UID = "local-admin";
 
