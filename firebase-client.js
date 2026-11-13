@@ -126,8 +126,8 @@ async function saveAdminProfile(profile) {
 }
 
 function rebrandText(value) {
-  return value.replace(/Tropica\s+Industries/gi, "Apple Inc.")
-    .replace(/Tropica/gi, "Apple Inc.")
+  return value.replace(/Tropica\s+Industries/gi, "Company Name")
+    .replace(/Tropica/gi, "Company Name")
     .replace(/FCFA/g, "AUD")
     .replace(/₣/g, "A$");
 }
@@ -155,7 +155,7 @@ function makeLoginBrand() {
   const brand = document.createElement("div");
   brand.className = "apple-login-brand";
   brand.setAttribute("role", "img");
-  brand.setAttribute("aria-label", "Apple Inc. Industries");
+  brand.setAttribute("aria-label", "Company Name Industries");
   brand.style.cssText = "display:flex;align-items:center;gap:12px;color:#f4f4f2";
   brand.append(makeAppleLogo());
   const copy = document.createElement("span");
