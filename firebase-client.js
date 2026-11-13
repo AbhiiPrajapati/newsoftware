@@ -161,7 +161,7 @@ function makeLoginBrand() {
   const copy = document.createElement("span");
   copy.style.cssText = "display:flex;flex-direction:column;line-height:1.04;letter-spacing:.09em";
   const name = document.createElement("strong");
-  name.textContent = "Apple Inc.";
+  name.textContent = "Company Name";
   name.style.cssText = "font-size:17px;font-weight:800;letter-spacing:.01em;color:#fff";
   const industry = document.createElement("small");
   industry.textContent = "INDUSTRIES";
@@ -201,9 +201,9 @@ function rebrandPage() {
   document.querySelectorAll("img.login-logo, .brand img, .employee-brand img").forEach(image => {
     const wordmark = document.createElement("span");
     wordmark.className = `${image.className} apple-wordmark`;
-    wordmark.textContent = "Apple Inc.";
+    wordmark.textContent = "Company Name";
     wordmark.setAttribute("role", "img");
-    wordmark.setAttribute("aria-label", "Apple Inc.");
+    wordmark.setAttribute("aria-label", "Company Name");
     wordmark.style.cssText = "display:inline-flex;align-items:center;justify-content:center;object-fit:contain;font-weight:800;font-size:1.15rem;letter-spacing:.02em;color:inherit;min-width:100px;min-height:36px";
     image.replaceWith(wordmark);
   });
