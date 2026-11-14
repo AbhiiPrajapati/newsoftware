@@ -413,8 +413,8 @@ html.auth-pending .auth-loading {
 
 #sidebar .brand-shield {
   display: block;
-  width: 37px;
-  height: 37px;
+  width: 39px;
+  height: 39px;
   flex: 0 0 34px;
   padding: 0;
   background: transparent !important;
