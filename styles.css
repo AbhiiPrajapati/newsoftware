@@ -408,13 +408,13 @@ html.auth-pending .auth-loading {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 6px;
+  gap: 3px;
 }
 
 #sidebar .brand-shield {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 43px;
+  height: 43px;
   flex: 0 0 32px;
   padding: 0;
   background: transparent !important;
