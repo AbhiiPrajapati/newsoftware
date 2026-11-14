@@ -153,6 +153,12 @@ function makeLoginBrand() {
   const name = document.createElement("strong");
   name.textContent = "DemoCorp";
   name.style.cssText = "font-size:17px;font-weight:800;letter-spacing:.01em;color:#fff";
+
+/* Adding Space between Democorp and Industries */
+const copy = document.createElement("span");
+copy.style.cssText = "display:flex;flex-direction:column;gap:3px;line-height:1.04;letter-spacing:.09em";
+
+  
   const industry = document.createElement("small");
   industry.textContent = "INDUSTRIES";
   industry.style.cssText = "font-size:10px;font-weight:700;letter-spacing:.28em;color:#d0d9d5";
