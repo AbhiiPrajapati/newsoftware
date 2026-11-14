@@ -91,3 +91,17 @@ html.auth-pending .auth-loading {
     border-top-color: #b8d7c1;
   }
 }
+
+
+.login-art {
+  container-type: inline-size;
+}
+
+.art-copy h1 {
+  font-size: clamp(1.75rem, 8cqi, 4rem);
+}
+
+.art-copy h1,
+.art-copy h1 em {
+  white-space: nowrap;
+}
