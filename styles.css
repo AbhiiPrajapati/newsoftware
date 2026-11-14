@@ -253,3 +253,6 @@ html.auth-pending .auth-loading {
 #loginView .art-copy h1 em {
   color: #3b82f6;
 }
+#loginView .login-card .eyebrow {
+  color: #3b82f6;
+}
