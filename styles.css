@@ -348,10 +348,15 @@ html.auth-pending .auth-loading {
   stroke: #12643c !important;
 }
 
-/* Dark blue for selected sidebar + labels */
-#sidebar .nav-item.active,
+/* Blue label text, without a colored box */
 .eyebrow,
 #overviewPage .eyebrow {
-  background: #1d4ed8 !important;
-  color: #f8fbff !important;
+  background: transparent !important;
+  color: #1d4ed8 !important;
+}
+
+/* Keep the selected sidebar item dark blue */
+#sidebar .nav-item.active {
+  background: #1e3a8a !important;
+  color: #fff !important;
 }
