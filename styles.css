@@ -336,6 +336,14 @@ html.auth-pending .auth-loading {
   stroke: #12643c !important;
 }
 
+/* Dark blue for selected sidebar + labels */
+#sidebar .nav-item.active,
+.eyebrow,
+#overviewPage .eyebrow {
+  background: #1d4ed8 !important;
+  color: #f8fbff !important;
+}
+
 #chartPoints circle {
   stroke: #12643c !important;
 }
