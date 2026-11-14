@@ -440,7 +440,7 @@ html.auth-pending .auth-loading {
 }
 
 #sidebar .brand-copy {
-  gap: 2px;
+  gap: 6px;
 }
 
 #sidebar .brand-copy strong {
