@@ -126,8 +126,8 @@ async function saveAdminProfile(profile) {
 }
 
 function rebrandText(value) {
-  return value.replace(/Tropica\s+Industries/gi, "Company Name")
-    .replace(/Tropica/gi, "Company Name")
+  return value.replace(/Tropica\s+Industries/gi, "DemoCorp")
+    .replace(/Tropica/gi, "DemoCorp")
     .replace(/FCFA/g, "AUD")
     .replace(/₣/g, "A$");
 }
@@ -155,13 +155,13 @@ function makeLoginBrand() {
   const brand = document.createElement("div");
   brand.className = "apple-login-brand";
   brand.setAttribute("role", "img");
-  brand.setAttribute("aria-label", "Company Name Industries");
+  brand.setAttribute("aria-label", "DemoCorp Industries");
   brand.style.cssText = "display:flex;align-items:center;gap:12px;color:#f4f4f2";
   brand.append(makeAppleLogo());
   const copy = document.createElement("span");
   copy.style.cssText = "display:flex;flex-direction:column;line-height:1.04;letter-spacing:.09em";
   const name = document.createElement("strong");
-  name.textContent = "Company Name";
+  name.textContent = "DemoCorp";
   name.style.cssText = "font-size:17px;font-weight:800;letter-spacing:.01em;color:#fff";
   const industry = document.createElement("small");
   industry.textContent = "INDUSTRIES";
@@ -201,9 +201,9 @@ function rebrandPage() {
   document.querySelectorAll("img.login-logo, .brand img, .employee-brand img").forEach(image => {
     const wordmark = document.createElement("span");
     wordmark.className = `${image.className} apple-wordmark`;
-    wordmark.textContent = "Company Name";
+    wordmark.textContent = "DemoCorp";
     wordmark.setAttribute("role", "img");
-    wordmark.setAttribute("aria-label", "Company Name");
+    wordmark.setAttribute("aria-label", "DemoCorp");
     wordmark.style.cssText = "display:inline-flex;align-items:center;justify-content:center;object-fit:contain;font-weight:800;font-size:1.15rem;letter-spacing:.02em;color:inherit;min-width:100px;min-height:36px";
     image.replaceWith(wordmark);
   });
