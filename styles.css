@@ -430,3 +430,23 @@ html.auth-pending .auth-loading {
   gap: 7px; 
   align-items: flex-start;
 }
+
+/*height Difference set*/
+
+#sidebar .brand-shield {
+  width: 36px;
+  height: 36px;
+  flex-basis: 36px;
+}
+
+#sidebar .brand-copy {
+  gap: 1px;
+}
+
+#sidebar .brand-copy strong {
+  font-size: 18px;
+}
+
+#sidebar .brand-caption {
+  font-size: 11px;
+}
