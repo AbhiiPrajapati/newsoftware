@@ -195,7 +195,7 @@ function rebrandPage() {
     if (greetingMark.style.color !== "rgb(0, 0, 0)") greetingMark.style.color = "#000";
     if (greetingMark.style.fontStyle !== "normal") greetingMark.style.fontStyle = "normal";
   }
-  document.querySelectorAll("img.login-logo, .brand img, .employee-brand img").forEach(image => {
+  document.querySelectorAll("img.login-logo, .brand img:not(.brand-shield), .employee-brand img").forEach(image => {
     const wordmark = document.createElement("span");
     wordmark.className = `${image.className} apple-wordmark`;
     wordmark.textContent = "DemoCorp";
