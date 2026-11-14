@@ -323,3 +323,19 @@ html.auth-pending .auth-loading {
 #employeeTargetGradient stop:nth-child(3) {
   stop-color: #93c5fd;
 }
+
+/* Selected sidebar item */
+#sidebar .nav-item.active {
+  background: #dbeafe !important;
+  color: #1e3a8a !important;
+  border-left-color: #3b82f6;
+}
+
+/* Main sales chart line and its data points */
+#actualPath {
+  stroke: #12643c !important;
+}
+
+#chartPoints circle {
+  stroke: #12643c !important;
+}
