@@ -408,7 +408,7 @@ html.auth-pending .auth-loading {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 7px;
 }
 
 #sidebar .brand-shield {
