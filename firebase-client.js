@@ -148,24 +148,25 @@ function makeLoginBrand() {
   brand.setAttribute("aria-label", "DemoCorp Industries");
   brand.style.cssText = "display:flex;align-items:center;gap:12px;color:#f4f4f2";
   brand.append(makeAppleLogo());
+
   const copy = document.createElement("span");
-  copy.style.cssText = "display:flex;flex-direction:column;line-height:1.04;letter-spacing:.09em";
+  copy.style.cssText = "display:flex;flex-direction:column;gap:3px;line-height:1.04;letter-spacing:.09em";
+
   const name = document.createElement("strong");
   name.textContent = "DemoCorp";
   name.style.cssText = "font-size:17px;font-weight:800;letter-spacing:.01em;color:#fff";
 
-/* Adding Space between Democorp and Industries */
-const copy = document.createElement("span");
-copy.style.cssText = "display:flex;flex-direction:column;gap:3px;line-height:1.04;letter-spacing:.09em";
-
-  
   const industry = document.createElement("small");
   industry.textContent = "INDUSTRIES";
   industry.style.cssText = "font-size:10px;font-weight:700;letter-spacing:.28em;color:#d0d9d5";
+
   copy.append(name, industry);
   brand.append(copy);
   return brand;
 }
+
+
+
 function rebrandPage() {
   if (!document.body) return;
   const title = rebrandText(document.title);
