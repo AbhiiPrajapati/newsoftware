@@ -427,5 +427,6 @@ html.auth-pending .auth-loading {
 #sidebar .brand-copy {
   display: flex;
   flex-direction: column;
+  gap: 7px; 
   align-items: flex-start;
 }
