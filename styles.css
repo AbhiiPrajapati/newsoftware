@@ -206,3 +206,16 @@ html.auth-pending .auth-loading {
     font-size: clamp(2rem, 7vw, 3rem);
   }
 }
+
+
+#loginView {
+  grid-template-columns: 48% 52%;
+}
+
+#loginView::before {
+  display: none;
+}
+
+#loginView .art-copy {
+  transform: translateY(-30px);
+}
