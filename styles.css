@@ -105,3 +105,104 @@ html.auth-pending .auth-loading {
 .art-copy h1 em {
   white-space: nowrap;
 }
+
+/* Car Dashboard style  */
+
+/* Login screen: image-led split layout */
+#loginView {
+  position: relative;
+  grid-template-columns: 56% 44%;
+  min-height: 100vh;
+}
+
+#loginView::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 0 auto;
+  height: 6px;
+  background: #168bd0;
+}
+
+#loginView .login-art {
+  position: relative;
+  min-width: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .66), rgba(0, 0, 0, .14)),
+    url("assets/LoginBG.png") center / cover no-repeat;
+  color: #fff;
+}
+
+#loginView .art-top,
+#loginView .art-copy,
+#loginView .art-foot {
+  position: relative;
+  z-index: 1;
+}
+
+#loginView .art-copy {
+  max-width: 100%;
+}
+
+#loginView .art-copy h1 {
+  font-size: clamp(2.2rem, 4.6vw, 3.25rem);
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+#loginView .art-copy h1 em {
+  color: #20d9df;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+/* White login side, with the DemoCorp wordmark above the card */
+#loginView .login-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: #fff;
+  padding: 32px;
+}
+
+#loginView .login-panel > .login-logo,
+#loginView .login-panel > .apple-wordmark {
+  margin: 0;
+  color: #10191c;
+}
+
+#loginView .login-card {
+  width: min(100%, 330px);
+  padding: 24px;
+  border: 1px solid #e5e9e9;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(15, 35, 40, .08);
+}
+
+#loginView .login-legal {
+  margin: 0;
+  text-align: center;
+}
+
+/* Stack the panels on smaller screens */
+@media (max-width: 760px) {
+  #loginView {
+    grid-template-columns: 1fr;
+  }
+
+  #loginView .login-art {
+    min-height: 52vh;
+  }
+
+  #loginView .login-panel {
+    min-height: 48vh;
+    padding: 28px 18px;
+  }
+
+  #loginView .art-copy h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+}
