@@ -447,6 +447,15 @@ html.auth-pending .auth-loading {
   font-size: 18px;
 }
 
+/* gap */
+
+
+#sidebar .brand-copy strong,
 #sidebar .brand-caption {
-  font-size: 11px;
+  margin: 0;
+  line-height: 1;
+}
+
+#sidebar .brand-caption {
+  margin-top: -2px; /* Pull SALES PORTAL closer; adjust to -1px or -3px */
 }
