@@ -360,3 +360,9 @@ html.auth-pending .auth-loading {
   background: #1e3a8a !important;
   color: #fff !important;
 }
+
+#sidebar .workspace-label {
+  color: #7cc8ff;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
