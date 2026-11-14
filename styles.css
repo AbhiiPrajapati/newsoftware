@@ -219,3 +219,20 @@ html.auth-pending .auth-loading {
 #loginView .art-copy {
   transform: translateY(-30px);
 }
+
+
+#loginView .login-card {
+  width: min(100%, 400px);
+}
+
+#loginView .login-card h2 {
+  white-space: nowrap;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+}
+
+/* Dark bluish-purple to light blue */
+#loginView #employeeLoginSubmit {
+  background: linear-gradient(110deg, #392b78, #55a9f5);
+  border: 0;
+  color: #fff;
+}
