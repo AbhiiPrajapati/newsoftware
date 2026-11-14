@@ -236,3 +236,20 @@ html.auth-pending .auth-loading {
   border: 0;
   color: #fff;
 }
+
+
+
+/* Green to Blue */
+:root {
+  --green: #2563eb;
+  --green-dark: #1e3a8a;
+  --mint: #eff6ff;
+}
+
+/* Green-colored text accents */
+.text-btn,
+.admin-credit a,
+.employee-eyebrow,
+#loginView .art-copy h1 em {
+  color: #3b82f6;
+}
