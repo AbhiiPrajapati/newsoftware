@@ -191,9 +191,9 @@ function rebrandPage() {
   document.querySelectorAll("img.login-logo, .brand img, .employee-brand img").forEach(image => {
     const wordmark = document.createElement("span");
     wordmark.className = `${image.className} apple-wordmark`;
-    wordmark.textContent = "DemoCorp";
+    wordmark.textContent = "company";
     wordmark.setAttribute("role", "img");
-    wordmark.setAttribute("aria-label", "DemoCorp");
+    wordmark.setAttribute("aria-label", "company");
     wordmark.style.cssText = "display:inline-flex;align-items:center;justify-content:center;object-fit:contain;font-weight:800;font-size:1.15rem;letter-spacing:.02em;color:inherit;min-width:100px;min-height:36px";
     image.replaceWith(wordmark);
   });
