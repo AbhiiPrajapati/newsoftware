@@ -1,7 +1,7 @@
 const $ = (s, root=document) => root.querySelector(s);
 const $$ = (s, root=document) => [...root.querySelectorAll(s)];
-const money = n => Number(n||0).toLocaleString('en-US',{maximumFractionDigits:0}) + ' FCFA';
-const compact = n => Number(n||0)>=1000000000 ? (Number(n)/1000000000).toFixed(2)+'B FCFA' : Number(n||0)>=1000000 ? (Number(n)/1000000).toFixed(2)+'M FCFA' : money(n);
+const money = n => Number(n||0).toLocaleString('en-US',{maximumFractionDigits:0}) + ' AUD';
+const compact = n => Number(n||0)>=1000000000 ? (Number(n)/1000000000).toFixed(2)+'B AUD' : Number(n||0)>=1000000 ? (Number(n)/1000000).toFixed(2)+'M FCFA' : money(n);
 const monthNames=['January','February','March','April','May','June','July','August','September','October','November','December'];
 let now=new Date(), currentMonth=now.getMonth(), currentYear=now.getFullYear();
 const snapshotMonth='2026-11';
