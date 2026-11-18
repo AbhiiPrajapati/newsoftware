@@ -7,7 +7,7 @@ let now=new Date(), currentMonth=now.getMonth(), currentYear=now.getFullYear();
 const snapshotMonth='2026-11';
 let people=[];
 const productDefaults=[];
-const categories=['Pesticide','Insecticide','Others'];
+const categories=['SUV','Sedan','Coupe','Electric','Luxury'];
 let entries=[];
 let salesSnapshots=[];
 let teamTarget=0;
