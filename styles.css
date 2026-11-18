@@ -374,8 +374,8 @@ html.auth-pending .auth-loading {
 }
 
 #sidebar .brand-shield {
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   flex: none;
   object-fit: contain;
 }
