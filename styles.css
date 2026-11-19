@@ -717,3 +717,20 @@ html.auth-pending .auth-loading {
     animation: none;
   }
 }
+
+
+/* Team table: shift the Actions heading slightly right and buttons left */
+.team-panel .data-table th:last-child {
+  text-align: left;
+  padding-left: 28px; /* increase to move “Actions” farther right */
+}
+
+.team-panel .data-table td:last-child {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.team-panel .team-actions {
+  justify-content: flex-start; /* moves Remove and X toward the left */
+  gap: 7px;
+}
