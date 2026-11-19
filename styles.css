@@ -459,3 +459,200 @@ html.auth-pending .auth-loading {
 #sidebar .brand-caption {
   margin-top: -2px; /* Pull SALES PORTAL closer; adjust to -1px or -3px */
 }
+
+
+/*Neon Gaming Style for employee Dashboard*/
+
+/* Neon racing backdrop, podium texture, and trophy lighting */
+.app-shell.employee-mode #employeePage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #050a18;
+  background-image:
+    radial-gradient(ellipse at 15% 43%, #00cfff20, transparent 34%),
+    radial-gradient(ellipse at 86% 12%, #7044ff28, transparent 36%),
+    linear-gradient(135deg, #050a18, #08152b 58%, #050a18);
+}
+
+/* Low-contrast moving light streaks behind the dashboard content */
+.app-shell.employee-mode #employeePage::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  opacity: .38;
+  background: repeating-linear-gradient(
+    112deg,
+    transparent 0 115px,
+    #28c9ff12 116px 118px,
+    transparent 119px 205px
+  );
+  background-size: 180% 100%;
+  mask-image: radial-gradient(ellipse at 82% 12%, #000 0%, transparent 68%);
+  animation: race-light-drift 16s linear infinite;
+}
+
+.app-shell.employee-mode #employeePage > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes race-light-drift {
+  to { background-position: -180% 0; }
+}
+
+/* Blue title highlight */
+.employee-title-accent {
+  color: #58a8ff;
+  text-shadow: 0 0 12px #168bff90, 0 0 32px #168bff55;
+}
+
+/* Floating shield with a soft neon halo */
+.employee-heading-shield {
+  display: grid;
+  place-items: center;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 72px;
+  margin-right: 14px;
+  filter: drop-shadow(0 0 8px #48baffb0) drop-shadow(0 0 22px #167dff70);
+  animation: shield-float 3.8s ease-in-out infinite;
+}
+
+.employee-heading-shield img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes shield-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-5px) rotate(2deg); }
+}
+
+.employee-command-heading {
+  justify-content: flex-start;
+}
+
+.employee-command-heading > div {
+  min-width: 0;
+}
+
+/* Textured grid and glowing floor behind the trophies */
+.employee-command-top .podium-panel::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 45px 12px 0;
+  pointer-events: none;
+  opacity: .5;
+  background-image:
+    radial-gradient(circle, #7beaff95 1px, transparent 1.7px),
+    linear-gradient(#45caff20 1px, transparent 1px),
+    linear-gradient(90deg, #45caff20 1px, transparent 1px);
+  background-size: 42px 38px, 21px 21px, 21px 21px;
+  mask-image: linear-gradient(to bottom, #000, transparent 92%);
+}
+
+.employee-command-top .podium-panel::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 3%;
+  right: 3%;
+  bottom: 0;
+  height: 36%;
+  pointer-events: none;
+  opacity: .52;
+  transform: perspective(220px) rotateX(56deg);
+  transform-origin: bottom;
+  background:
+    linear-gradient(90deg, transparent, #11cfff50, transparent),
+    repeating-linear-gradient(90deg, #27caff35 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(0deg, #27caff35 0 1px, transparent 1px 25px);
+  mask-image: linear-gradient(to top, #000, transparent);
+}
+
+.employee-command-top .podium-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Separate blue, gold, and violet light pools below each trophy */
+.employee-winner {
+  position: relative;
+}
+
+.employee-winner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 5%;
+  right: 5%;
+  top: 24%;
+  bottom: 12%;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.employee-winner.first::before {
+  background: #ffc94a30;
+}
+
+.employee-winner.second::before {
+  background: #35d7ff32;
+}
+
+.employee-winner.third::before {
+  background: #c16aff32;
+}
+
+.employee-winner .employee-trophy {
+  filter: drop-shadow(0 0 8px #71dfff90) drop-shadow(0 0 22px #248cff55);
+}
+
+.employee-winner.first .employee-trophy {
+  filter: drop-shadow(0 0 10px #ffe071b0) drop-shadow(0 0 28px #ffbd3e70);
+}
+
+.employee-winner.third .employee-trophy {
+  filter: drop-shadow(0 0 9px #ed9fff90) drop-shadow(0 0 24px #a243ff60);
+}
+
+/* Neon borders and gauge glow on the target card */
+.employee-command-top .target-command-panel {
+  border-color: #9c6cffb0;
+  box-shadow: 0 0 18px #864aff35, inset 0 0 26px #773dff14;
+}
+
+.employee-gauge {
+  filter: drop-shadow(0 0 9px #11d8ffb0) drop-shadow(0 0 24px #087eff70);
+}
+
+#employeeTargetGradient stop:nth-child(1) { stop-color: #096eff; }
+#employeeTargetGradient stop:nth-child(2) { stop-color: #12dfff; }
+#employeeTargetGradient stop:nth-child(3) { stop-color: #a0f7ff; }
+
+/* Keep motion subtle and respect accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.employee-mode #employeePage::before,
+  .employee-heading-shield {
+    animation: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .employee-command-heading {
+    align-items: center;
+  }
+
+  .employee-heading-shield {
+    flex-basis: 44px;
+    width: 44px;
+    height: 52px;
+    margin-right: 10px;
+  }
+}
