@@ -5,7 +5,16 @@ const views=[];
  function buildTrophy(color){
  const g=new THREE.Group();
  const metal=new THREE.MeshPhysicalMaterial({color,metalness:1,roughness:.19,clearcoat:1,clearcoatRoughness:.13});
- const cupMetal=new THREE.MeshPhysicalMaterial({color,metalness:1,roughness:.08,clearcoat:1,clearcoatRoughness:.04});
+  
+const cupMetal = new THREE.MeshPhysicalMaterial({
+  color,
+  metalness: 1,
+  roughness: .08,
+  clearcoat: 1,
+  clearcoatRoughness: .04,
+  envMapIntensity: 1.6
+});
+  
  const trim=new THREE.MeshPhysicalMaterial({color,metalness:1,roughness:.12});
  const black=new THREE.MeshPhysicalMaterial({color:0x111a17,metalness:.65,roughness:.22,clearcoat:1});
   
