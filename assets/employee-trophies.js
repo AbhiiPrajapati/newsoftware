@@ -1,11 +1,14 @@
 import * as THREE from './three.module.js';
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const views=[];
-function buildTrophy(color){
+
+ function buildTrophy(color){
  const g=new THREE.Group();
  const metal=new THREE.MeshPhysicalMaterial({color,metalness:1,roughness:.19,clearcoat:1,clearcoatRoughness:.13});
+ const cupMetal=new THREE.MeshPhysicalMaterial({color,metalness:1,roughness:.08,clearcoat:1,clearcoatRoughness:.04});
  const trim=new THREE.MeshPhysicalMaterial({color,metalness:1,roughness:.12});
  const black=new THREE.MeshPhysicalMaterial({color:0x111a17,metalness:.65,roughness:.22,clearcoat:1});
+  
  function lathe(points,mat=metal){const mesh=new THREE.Mesh(new THREE.LatheGeometry(points.map(([r,y])=>new THREE.Vector2(r,y)),96),mat);g.add(mesh);return mesh}
  function ring(r,y,t=.025){const m=new THREE.Mesh(new THREE.TorusGeometry(r,t,12,96),trim);m.rotation.x=Math.PI/2;m.position.y=y;g.add(m)}
  // Solid stepped plinth and turned stem, with a hollow, double-walled cup.
@@ -13,7 +16,7 @@ function buildTrophy(color){
  ring(.86,.09,.035);ring(.76,.5,.03);
  lathe([[0,.53],[.73,.53],[.73,.6],[.67,.65],[.6,.66],[.58,.75],[.55,.78],[.55,.92],[.48,.94],[.48,1.04],[.4,1.06],[.39,1.17],[.28,1.22],[.19,1.3],[.14,1.42],[.13,1.52],[.21,1.59],[.22,1.68],[.16,1.75],[.14,1.9],[.23,2.02],[0,2.02]]);
  for(const [r,y] of [[.57,.79],[.47,.96],[.38,1.08],[.21,1.65],[.16,1.82]])ring(r,y,.018);
- lathe([[0,1.97],[.18,1.97],[.3,2.03],[.43,2.15],[.55,2.32],[.65,2.58],[.73,2.91],[.78,3.25],[.8,3.5],[.79,3.56],[.735,3.56],[.73,3.48],[.72,3.24],[.66,2.91],[.59,2.6],[.48,2.36],[.36,2.19],[.22,2.11],[0,2.11]]);
+ lathe([[0,1.97],[.18,1.97],[.3,2.03],[.43,2.15],[.55,2.32],[.65,2.58],[.73,2.91],[.78,3.25],[.8,3.5],[.79,3.56],[.735,3.56],[.73,3.48],[.72,3.24],[.66,2.91],[.59,2.6],[.48,2.36],[.36,2.19],[.22,2.11],[0,2.11]],cupMetal);
  ring(.78,3.51,.035);ring(.76,3.36,.014);
  for(const side of [-1,1]){
   const coords=[[.68,3.15],[.96,3.5],[1.2,3.52],[1.39,3.29],[1.43,2.99],[1.3,2.64],[1.03,2.37],[.7,2.18],[.2,1.84]];
