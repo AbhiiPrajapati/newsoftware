@@ -737,9 +737,10 @@ html.auth-pending .auth-loading {
 
 /* Neon publish card */
 .publish-card {
-  
-  min-height: clamp(460px, 65vh, 680px);
-  padding: 32px;
+  min-height: 420px;
+  padding: 24px;
+  border-radius: 22px;
+  width: 100%;
   
   position: relative;
   isolation: isolate;
@@ -772,6 +773,8 @@ html.auth-pending .auth-loading {
 }
 
 .publish-card h3 {
+  font-size: 24px;
+  margin: 18px 0 8px;
   color: #a9eaff;
   text-shadow: 0 0 16px #2bcfff55;
 }
@@ -832,29 +835,5 @@ html.auth-pending .auth-loading {
 }
 
 
-/* Increase text sizes in the publish card */
-.publish-card h3 {
-  font-size: 24px;
-}
-
-.publish-card p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.publish-card .publish-meta {
-  font-size: 19px;
-}
-
-.publish-card .publish-meta b {
-  font-size: 22px;
-}
-
-.publish-card #publishBtn {
-  font-size: 18px;
-  padding: 16px 20px;
-}
-
-.publish-card .publish-foot {
-  font-size: 14px;
-}
+font-size: 24px;
+  margin: 18px 0 8px;
