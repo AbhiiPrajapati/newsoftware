@@ -738,7 +738,7 @@ html.auth-pending .auth-loading {
 /* Neon publish card */
 .publish-card {
   
-  min-height: clamp(520px, 65vh, 680px);
+  min-height: clamp(460px, 65vh, 680px);
   padding: 32px;
   
   position: relative;
