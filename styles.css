@@ -432,11 +432,11 @@ html.auth-pending .auth-loading {
 }
 
 /*height Difference set*/
-
+/*NOW*/
 #sidebar .brand-shield {
-  width: 36px;
-  height: 36px;
-  flex-basis: 36px;
+  width: 44px;
+  height: 44px;
+  flex-basis: 44px;
 }
 
 #sidebar .brand-copy {
