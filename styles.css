@@ -834,11 +834,11 @@ html.auth-pending .auth-loading {
 
 /* Increase text sizes in the publish card */
 .publish-card h3 {
-  font-size: 34px;
+  font-size: 24px;
 }
 
 .publish-card p {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
