@@ -656,3 +656,64 @@ html.auth-pending .auth-loading {
     margin-right: 10px;
   }
 }
+
+
+/* Animated neon border around the 1st/2nd/3rd place frames */
+@property --rank-glow-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.employee-plinth {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid transparent !important;
+  background:
+    linear-gradient(120deg, #10243a, #101629) padding-box,
+    linear-gradient(120deg, #35dfff, #526dff, #d86bff, #35dfff) border-box !important;
+}
+
+.employee-plinth::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--rank-glow-angle),
+    transparent 0deg 230deg,
+    #45eaff 270deg,
+    #a855ff 305deg,
+    #ffe27a 330deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  filter: drop-shadow(0 0 5px #36dfff) drop-shadow(0 0 10px #655bff);
+  animation: rank-frame-glow 3.2s linear infinite;
+  pointer-events: none;
+}
+
+.employee-plinth > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rank-frame-glow {
+  to { --rank-glow-angle: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .employee-plinth::before {
+    animation: none;
+  }
+}
