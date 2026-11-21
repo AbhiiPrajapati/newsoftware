@@ -9,10 +9,10 @@ const views=[];
 const cupMetal = new THREE.MeshPhysicalMaterial({
   color,
   metalness: 1,
-  roughness: 0.12,
+  roughness: 0.11,
   clearcoat: 1,
-  clearcoatRoughness: 0.05,
-  envMapIntensity: 2
+  clearcoatRoughness: 0.03,
+  envMapIntensity: 3
 });
   
  const trim=new THREE.MeshPhysicalMaterial({color,metalness:1,roughness:.12});
@@ -58,7 +58,13 @@ function createView(el,rank){
  // Photographic studio reflection panels create moving highlights on real metal.
  const studio=new THREE.Scene();studio.background=new THREE.Color(0x1b211e);
  function softbox(x,y,z,w,h,power){const p=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color(power,power*.97,power*.88),side:THREE.DoubleSide}));p.position.set(x,y,z);p.lookAt(0,1.8,0);studio.add(p)}
- softbox(-4,4,3,2.8,7,7);softbox(4,3,2,1.2,6,5);softbox(0,7,-1,5,3,6);softbox(1,2,-5,2,5,4);softbox(-1,1,5,.6,5,2);softbox(0, 4, 4, 3.2, 4, 8);
+softbox(-4,4,3,2.8,7,7);
+softbox(4,3,2,1.2,6,5);
+softbox(0,7,-1,5,3,6);
+softbox(1,2,-5,2,5,4);
+softbox(-1,1,5,.6,5,2);
+softbox(-2.2,3,4,1.4,4.2,10);
+softbox(2.2,3,4,1.4,4.2,10);
  stage='studio reflection environment generation';
  const pmrem=new THREE.PMREMGenerator(renderer);try{environment=pmrem.fromScene(studio,.04);scene.environment=environment.texture}finally{pmrem.dispose()}
  const camera=new THREE.PerspectiveCamera(33,1,.1,100);camera.position.set(0,3.6,8.5);camera.lookAt(0,1.9,0);
