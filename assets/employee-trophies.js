@@ -8,11 +8,11 @@ const views=[];
   
 const cupMetal = new THREE.MeshPhysicalMaterial({
   color,
-  metalness: 1,
-  roughness: .08,
+  metalness: 0.82,
+  roughness: 0.16,
   clearcoat: 1,
-  clearcoatRoughness: .04,
-  envMapIntensity: 1.6
+  clearcoatRoughness: 0.06,
+  envMapIntensity: 2.2
 });
   
  const trim=new THREE.MeshPhysicalMaterial({color,metalness:1,roughness:.12});
