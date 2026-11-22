@@ -196,7 +196,7 @@ function renderEmployee(){
  $('#employeeTargetRemaining').textContent=`${employeeFmt(remaining)} FCFA`;$('#employeeTargetLeftPercent').textContent=`${target?(remaining/target*100).toFixed(1):'0.0'}%`;
  $('#employeeTargetQuote').textContent=achieved>=100?'Target achieved! We super achieved our target! 🏆':achieved>=75?'Just a bit more to go — you’ve got this!':achieved>=50?'We’re on fire! Keep pushing!':achieved>=25?'Halfway there — keep the momentum!':'Great start! Let’s get moving!';
  const sortKey=$('#employeeSort')?.value||'sales';const sorted=[...ranked].sort((a,b)=>sortKey==='sales'?b.actual-a.actual:sortKey==='closed'?b.closed-a.closed||b.actual-a.actual:b.entries-a.entries||b.actual-a.actual);
- $('#employeeLeaderboardRows').innerHTML=sorted.map((p,i)=>`<tr><td><span class="employee-rank-pill">${String(i+1).padStart(2,'0')}</span></td><td class="employee-person">${p.name}${p.name===user.name?' (You)':''}<div class="employee-mini-bar"><i style="width:${Math.min(100,totalSales?p.actual/Math.max(1,...ranked.map(x=>x.actual))*100:0)}%"></i></div></td><td>${employeeFmt(p.entries)}</td><td>${employeeFmt(p.closed)}</td><td><strong>${employeeFmt(p.actual)}</strong></td></tr>`).join('');
+ $('#employeeLeaderboardRows').innerHTML=sorted.map((p,i)=>`<tr><td><span class="employee-rank-pill">${String(i+1).padStart(2,'0')}</span></td><td class="employee-person">${p.name}${p.name===user.name?' (You)':''}<div class="employee-mini-bar"><i style="width:${Math.min(100,totalSales?p.actual/Math.max(1,...ranked.map(x=>x.actual))*100:0)}%"></i></div></td><td><strong>${employeeFmt(p.actual)}</strong></td></tr>`).join('');
 }
 $('#employeeSort').addEventListener('change',renderEmployee);
 
