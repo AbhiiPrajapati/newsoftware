@@ -842,3 +842,12 @@ font-size: 24px;
 .employee-command-header .employee-credit a {
   color: #fff !important;
 }
+
+.employee-leader-table th:nth-child(1),
+.employee-leader-table td:nth-child(1){width:90px;text-align:left}
+.employee-leader-table th:nth-child(2),
+.employee-leader-table td:nth-child(2){text-align:left}
+.employee-leader-table td{font-size:11px}
+
+.employee-mini-bar i{background:linear-gradient(90deg,#2d7bff,#a855ff)}
+.employee-mini-bar{width:70px;height:4px}
